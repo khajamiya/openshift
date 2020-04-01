@@ -5,6 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+
 @SpringBootApplication
 @RestController
 public class OpenShiftTrainingApplication {
@@ -14,7 +18,7 @@ public class OpenShiftTrainingApplication {
 	}
 
 	@RequestMapping("/")
-    public String welcome() {
-	    return "Hello from Docker";
+    public String welcome() throws UnknownHostException {
+	    return "Hello from Docker" + InetAddress.getLocalHost().getHostName();
     }
 }
