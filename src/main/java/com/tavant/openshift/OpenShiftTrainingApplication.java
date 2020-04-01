@@ -19,6 +19,6 @@ public class OpenShiftTrainingApplication {
 
 	@RequestMapping("/")
     public String welcome() throws UnknownHostException {
-	    return "Hello from Docker" + InetAddress.getLocalHost().getHostName();
+	    return "Hello from Docker Hari: " + InetAddress.getLocalHost().getHostName();
     }
 }

@@ -160,10 +160,15 @@ oc get endpoints --namespace=<project name>
 Note:This might fail as we do not have rights to create new project
 
 ###--- Delete resources --
-#####Delete all the resources from a project
+Delete all the resources of a project
+```
+oc get all --selector app=<application-name> -o name
+```
+Delete all the resources from a project
 ```
 oc delete all --all --namespace=demoproject
 ```
+
 
 
 ###--- Monitoring Logs ---
