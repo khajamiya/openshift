@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM docker-registry.default.svc:5000/openshift/java
 
 # Refer to Maven build -> finalName
 ARG JAR_FILE=target/*.jar
