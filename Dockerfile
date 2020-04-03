@@ -1,4 +1,4 @@
-FROM docker-registry.default.svc:5000/openshift/java
+FROM docker-registry.default.svc:5000/openshift/java:8
 
 # Refer to Maven build -> finalName
 ARG JAR_FILE=target/*.jar
